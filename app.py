@@ -11,15 +11,19 @@ st.subheader('Was the tutorial helpful?')
 excel_file = 'Survey_Results.xlsx'
 sheet_name = 'DATA'
 
+# Update this line to explicitly specify the engine as 'openpyxl'
 df = pd.read_excel(excel_file,
                    sheet_name=sheet_name,
                    usecols='B:D',
-                   header=3)
+                   header=3,
+                   engine='openpyxl')
 
 df_participants = pd.read_excel(excel_file,
-                                sheet_name= sheet_name,
+                                sheet_name=sheet_name,
                                 usecols='F:G',
-                                header=3)
+                                header=3,
+                                engine='openpyxl')
+
 df_participants.dropna(inplace=True)
 
 # --- STREAMLIT SELECTION
