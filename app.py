@@ -3,8 +3,6 @@ import streamlit as st
 import plotly.express as px
 from PIL import Image
 
-!pip install openpyxl==3.1.0
-
 st.set_page_config(page_title='Survey Results')
 st.header('Survey Results 2021')
 st.subheader('Was the tutorial helpful?')
